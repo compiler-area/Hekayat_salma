@@ -950,6 +950,7 @@ input, select, textarea {
 	.image {
 		position: relative;
 		display: inline-block;
+		transition: all ease-in-out .7s;
 	}
 
 		.image:before {
@@ -960,6 +961,32 @@ input, select, textarea {
 			width: 100%;
 			height: 100%;
 			background: url("images/overlay.png");
+		}
+
+		.image:after {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: url("images/overlay.png");
+			transition: all ease-in-out .7s;
+
+		}
+
+		.image:hover:after {
+			content: 'اضغط لمشاهدة الحلقة';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: #000000d9;
+			/* transform: scale(1.1); */
+			padding: 21%;
+			font-size: 20px;
+			color: aliceblue;
 		}
 
 		.image img {
@@ -2260,7 +2287,7 @@ input, select, textarea {
 /* Two */
 
 	#two {
-		background: url("images/overlay.png"), url("../../images/new/bg2.jpg");
+		background: url("images/overlay.png"), url("../../images/new/remi.jpg");
 		background-size: 100% 100%, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;
@@ -2283,6 +2310,7 @@ input, select, textarea {
 			-ms-transform: translateY(0);
 			transform: translateY(0);
 			position: relative;
+			margin-bottom: 40px;
 		}
 
 		#contact.inactive .box {
@@ -2332,3 +2360,5 @@ input, select, textarea {
 			background-position: top left, bottom center;
 			background-repeat: repeat, no-repeat;
 		}
+
+		
